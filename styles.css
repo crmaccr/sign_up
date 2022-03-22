@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color: #333;
+  --color-btn: #596d48;
+  --border-input: #e5e7eb;
+}
+
+h3,
+p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  border-bottom: 1px solid white;
+}
+
+body {
+  height: 100vh;
+}
+.left {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.credentials {
+  position: absolute;
+  bottom: 1rem;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+.logo img {
+  width: 80px;
+}
+.row {
+  display: flex;
+  min-height: 100vh;
+}
+.row .left {
+  width: 30%;
+}
+.row .right {
+  width: 70%;
+}
+.hero {
+  height: 100%;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: gray;
+}
+
+.right .top,
+.right .bottom {
+  height: 30%;
+}
+
+.right .top p {
+  width: clamp(45ch, 50%, 75ch);
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+/* Form Fields */
+
+.middle {
+  background: white;
+  margin: 0 -1rem;
+  padding: 1rem;
+  box-shadow: 0 3px 10px 1px rgba(80, 80, 80);
+}
+
+label {
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.from-row > * {
+  width: 30%;
+}
+
+input {
+  padding: 0.2rem;
+  border: 1px solid var(--border-input);
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
+input:focus {
+  outline: none;
+  border-color: blue;
+  box-shadow: -1px 2px 10px 1px rgba(0, 0, 200, 0.75);
+  -webkit-box-shadow: -1px 2px 10px 1px rgba(0, 0, 200, 0.75);
+  -moz-box-shadow: -1px 2px 10px 1px rgba(0, 0, 200, 0.75);
+}
+
+.error {
+  border-color: red;
+}
+
+.error-msg {
+  color: red;
+}
+
+.right .bottom {
+  padding-top: 1rem;
+}
+
+button {
+  padding: 0.4rem 2rem;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--color-btn);
+  border: 0;
+  color: #ddd;
+}
+
+.bottom a {
+  color: var(--color-btn);
+  border-bottom-color: var(--color-btn);
+}
+
+@media screen and (max-width: 598px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row input {
+    width: 70%;
+  }
+}
